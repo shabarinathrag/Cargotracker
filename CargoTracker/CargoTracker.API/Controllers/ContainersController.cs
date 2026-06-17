@@ -11,6 +11,10 @@ public class ContainersController : ControllerBase
     public ContainersController(AppDbContext context) => _context = context;
 
     [HttpGet]
-    public async Task<ActionResult<IEnumerable<Container>>> GetContainers()
-        => await _context.Containers.ToListAsync();
+public async Task<ActionResult<IEnumerable<Container>>> GetContainers()
+{
+    var containers = _context.Containers.ToList();
+
+    return Ok(containers);
+}
 }
