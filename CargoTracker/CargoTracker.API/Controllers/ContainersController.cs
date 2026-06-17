@@ -18,3 +18,4 @@ public async Task<ActionResult<IEnumerable<Container>>> GetContainers()
     return Ok(containers);
 }
 }
+Console.WriteLine("Testing learning");
